@@ -1,10 +1,11 @@
 import React from "react";
-import RefsArray from "./refs-array";
+import { userContext } from './context'
+import Content from "./context-content";
 
-import MessageBox from "./state-func";
-
-function App() {
-  return <MessageBox/>
+export default function App() {
+  return (
+    <userContext.Provider value={'Tom jerry'}>
+      <Content/>
+    </userContext.Provider>
+  )
 }
- 
-export default App;
