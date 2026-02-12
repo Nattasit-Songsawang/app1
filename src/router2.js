@@ -15,7 +15,7 @@ export default function Router2(){
                 <NavLink to='/products' className={({isActive})=>isActive?"active_menu":"menu"}>
                 Product</NavLink> -&nbsp;
                 <NavLink to='/member' className={({isActive})=>isActive?"active_menu":"menu"}>
-                Member</NavLink> -&nbsp;
+                Membeer</NavLink> -&nbsp;
                 <NavLink to='/contact' className={({isActive})=>isActive?"active_menu":"menu"}>
                 Contact us</NavLink> &nbsp;
             </nav>
