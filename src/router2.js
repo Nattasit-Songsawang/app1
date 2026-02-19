@@ -1,11 +1,8 @@
 import React from 'react'
-import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, NavLink } from 'react-router-dom'
 import './navlink.css'
-import Products from './products'
-import Home from './home'
-import Member from './member'
 
-export default function Router3() {
+export default function Router2() {
   return (
     <BrowserRouter>
       <nav className="nav">
@@ -13,6 +10,7 @@ export default function Router3() {
             style = {({isActive}) => {
             return {fontWeight: isActive ? "bold" : ""};
         }}> Home</NavLink> -&nbsp;
+
         <NavLink to="/products" className={({ isActive }) => (isActive ? 'active_menu' : 'menu')}>
             Products </NavLink> -&nbsp;
         <NavLink to="/member" className={({ isActive }) => (isActive ? 'active_menu' : 'menu')}>
@@ -20,14 +18,6 @@ export default function Router3() {
         <NavLink to="/contact" className={({ isActive }) => (isActive ? 'active_menu' : 'menu')}>
             Contact Us </NavLink>
       </nav>
-
-      <Routes style={{margin:'20px'}}>
-        <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/member" Component={Member} />
-        <Route path="/contact" element={<div style={{ textAlign: 'center' }}>Contact Page</div>} />
-        <Route path="/*" element={<div style={{ textAlign: 'center' }}>Error 404 Not Found</div>} />
-      </Routes>
     </BrowserRouter>
   )
 }
